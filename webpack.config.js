@@ -1,11 +1,17 @@
 const path = require('path');
 
-console.log(__dirname);
-
 module.exports = {
     entry: './src/index.js',
+    devtool: 'source-map',
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve('dist'),
+        filename: 'bundle.js'
+    },
+    module: {
+        loaders: [
+            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.css$/, loader: 'css-loader', exclude: /node_modules/ }
+        ]
     }
 };
