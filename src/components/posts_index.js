@@ -10,13 +10,21 @@ class PostsIndex extends Component {
     }
 
     renderPosts() {
-        return _.map(this.props.posts, post => {
+        if (_.size(this.props.posts) === 0) {
             return (
-                <li className="list-group-item" key={post._id}>
-                    <Link to={`/posts/${post._id}`}>{post.title}</Link>
-                </li>
+                <div>
+                    Loading ...
+                </div>
             );
-        })
+        } else {
+            return _.map(this.props.posts, post => {
+                return (
+                    <li className="list-group-item" key={post._id}>
+                        <Link to={`/posts/${post._id}`}>{post.title}</Link>
+                    </li>
+                );
+            })
+        }
     }
 
     render() {
