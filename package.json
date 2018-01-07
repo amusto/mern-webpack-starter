@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "scripts/start-app.sh",
+    "heroku-prebuild": "npm install",
+    "start": "node server.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
