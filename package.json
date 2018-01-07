@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "npm install",
+    "heroku-prebuild": "npm install && npm run build",
+    "prestart": "npm install; npm run build",
     "start": "node server.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "path": "^0.12.7"
   }
 }
