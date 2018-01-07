@@ -1,0 +1,15 @@
+{
+  "server": { // Node server
+    "env": "production",
+    "host": "localhost",
+    "port": 8081,
+    "session_secret": "ilovescotchscotchyscotchscotch"
+  },
+  "db": { // MLABS MONGO CONFIG
+    "host": "ds125016.mlab.com",
+    "database_name": "heroku_jzb0k7s7",
+    "port": "25016",
+    "user": "app-user",
+    "password": "Passw0rd!"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mern-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "scripts/start-app.sh",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "config": "^1.28.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  }
+}
