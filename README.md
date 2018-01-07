@@ -1,2 +1,3 @@
 # mern-webpack-starter
-Express, React, Webpack Starter App
+Mongo, Express, React, Node
+Built with Webpack 
