@@ -44,6 +44,17 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session*/
 
+app.use (function (req, res, next) {
+    if (req.secure) {
+        console.log('request was via https, so redirect to https');
+        let redirect_url = `http://${req.headers.host}${req.url}`;
+        res.redirect(redirect_url);
+    } else {
+        console.log('request was via http, so do no special handling');
+        next();
+    }
+});
+
 // Run the app by serving the static files in the dist directory
 app.use(express.static(__dirname + '/dist'));
 

@@ -13,7 +13,7 @@ class PostsIndex extends Component {
         if (_.size(this.props.posts) === 0) {
             return (
                 <div>
-                    Loading ...
+                    Loading ... (Sorry, it takes some time to initially wake up the API server!)
                 </div>
             );
         } else {
