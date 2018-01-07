@@ -31865,20 +31865,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 (0, _registerServiceWorker2.default)();
 
-/*import _ from 'lodash';
-
-function component() {
-    var element = document.createElement('div');
-    let fullname = 'Armando Musto';
-
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = `Welcome to the site, ${fullname}!!!`;
-
-    return element;
-}
-
-document.body.appendChild(component());*/
-
 /***/ }),
 /* 250 */
 /***/ (function(module, exports, __webpack_require__) {

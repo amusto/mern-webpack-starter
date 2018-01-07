@@ -7,7 +7,9 @@
     "heroku-prebuild": "npm install",
     "prestart": "npm install",
     "start": "bash scripts/start-app.sh",
+    "server": "node server.js",
     "build": "webpack",
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,7 +26,8 @@
     "mongoose": "^4.13.5",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.4"
   },
   "dependencies": {
     "express": "^4.16.2",

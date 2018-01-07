@@ -2,7 +2,7 @@
 const express   = require('express'),
     path            = require('path'),
     http            = require('http'),
-    //fs              = require('fs'),
+    fs              = require('fs'),
     config          = require('config'),
     //passport        = require('passport'),
     bodyParser      = require('body-parser');
@@ -11,7 +11,18 @@ const express   = require('express'),
     //cookieParser    = require('cookie-parser'),
     //session         = require('express-session');
 
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
 const app = express();
+
+const webpack_config = require('./webpack.config.js');
+const compiler = webpack(webpack_config);
+
+// Tell express to use the webpack-dev-middleware and use the webpack.config.js configuration file as a base.
+app.use(webpackDevMiddleware(compiler, {
+    publicPath: webpack_config.output.publicPath
+}));
 
 // db configuration
 require('./config/database.js');
